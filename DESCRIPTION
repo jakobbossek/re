@@ -1,0 +1,17 @@
+Package: ressentials
+Title: Utility functions missing in base R
+Description:  A collection of simple utility functions for everyday tasks.
+Version: 1.0.0
+Authors@R: person("Jakob", "Bossek", email = "j.bossek@gmail.com", role = c("aut", "cre"))
+Depends:
+  R (>= 3.1.0)
+Imports:
+  checkmate
+Suggests:
+  testthat
+License: GPL-2 | file LICENSE
+BugReports: https://github.com/jakobbossek/ressentials/issues
+Encoding: UTF-8
+LazyData: true
+ByteCompile: true
+RoxygenNote: 6.1.1
