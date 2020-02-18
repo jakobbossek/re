@@ -1,6 +1,6 @@
-Package: ressentials
-Title: Utility functions missing in base R
-Description:  A collection of simple utility functions for everyday tasks.
+Package: ress
+Title: Utility Functions Missing in Base R
+Description: A collection of simple utility functions for everyday tasks.
 Version: 1.0.0
 Authors@R: person("Jakob", "Bossek", email = "j.bossek@gmail.com", role = c("aut", "cre"))
 Depends:
@@ -9,9 +9,12 @@ Imports:
   checkmate
 Suggests:
   testthat
-License: GPL-2 | file LICENSE
-BugReports: https://github.com/jakobbossek/ressentials/issues
+License: BSD_2_clause + file LICENSE
+URL: https://github.com/jakobbossek/ress
+BugReports: https://github.com/jakobbossek/ress/issues
 Encoding: UTF-8
 LazyData: true
 ByteCompile: true
+Roxygen: list(wrap = FALSE)
 RoxygenNote: 6.1.1
+

@@ -1,4 +1,4 @@
 library(testthat)
-library(ressentials)
+library(ress)
 
-test_check("ressentials")
+test_check("ress")
