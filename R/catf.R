@@ -5,3 +5,7 @@ catf = function(fmt, ...) {
 stopf = function(fmt, ...) {
   stop(sprintf(fmt, ...))
 }
+
+warnf = function(fmt, ...) {
+  warning(sprintf(fmt, ...))
+}
