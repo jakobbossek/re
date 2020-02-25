@@ -37,7 +37,7 @@ zip = function(...) {
     ns = sapply(args, length)
     args = lapply(args, unname)
     if (!all(ns == ns[1L]))
-      BBmisc::stopf("[zip] All arguments need to have the same length.")
+      stopf("[zip] All arguments need to have the same length.")
     l = vector(mode = "list", length = ns[1L])
     for (i in seq_len(ns[1L])) {
       l[[i]] = lapply(args, function(el) if (is.list(el)) el[[i]] else el[i])
