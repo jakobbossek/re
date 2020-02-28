@@ -1,6 +1,10 @@
-parseString = function(x, which = NULL, types, names, as.df = TRUE, ...) {
+parseString = function(x, ext = NULL, which = NULL, types, names, as.df = TRUE, append = TRUE, ...) {
   checkmate::assertCharacter(x, min.len = 1L, any.missing = FALSE, all.missing = FALSE)
   checkmate::assertString(types)
+
+  xbck = x
+  if (!is.null(ext))
+    x = gsub(ext, "", x, fixed = TRUE)
 
   exploded = strsplit(x, ...)
   types = unlist(strsplit(types, ""))
@@ -39,6 +43,9 @@ parseString = function(x, which = NULL, types, names, as.df = TRUE, ...) {
     parts[[i]] = converter[[types[i]]](tmp)
   }
   colnames(parts) = names
+
+  if (append)
+    parts$input = xbck
 
   if (!as.df) {
     return(rowToList(parts, named = TRUE))
