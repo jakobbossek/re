@@ -1,4 +1,4 @@
 library(testthat)
-library(ress)
+library(re)
 
-test_check("ress")
+test_check("re")

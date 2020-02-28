@@ -1,4 +1,4 @@
-Package: ress
+Package: re
 Title: Utility Functions Missing in Base R
 Description: A collection of simple utility functions for everyday tasks.
 Version: 1.0.0
@@ -10,8 +10,8 @@ Imports:
 Suggests:
   testthat
 License: BSD_2_clause + file LICENSE
-URL: https://github.com/jakobbossek/ress
-BugReports: https://github.com/jakobbossek/ress/issues
+URL: https://github.com/jakobbossek/re
+BugReports: https://github.com/jakobbossek/re/issues
 Encoding: UTF-8
 LazyData: true
 ByteCompile: true
