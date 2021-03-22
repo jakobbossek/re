@@ -18,3 +18,6 @@ Basically an alias for \code{\link[base]{sample}}
 Note that if the \code{x} is a scalar value the function returns
 simply the value itself, i.e. acts like the identity function.
 }
+\examples{
+shuffle(1:10)
+}

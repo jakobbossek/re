@@ -84,7 +84,7 @@ strParse = function(x, ext = NULL, which = NULL, types, names, as.df = TRUE, app
     parts$input = xbck
 
   if (!as.df) {
-    return(rowToList(parts, named = TRUE))
+    return(rowsToList(parts, named = TRUE))
   }
   return(parts)
 }

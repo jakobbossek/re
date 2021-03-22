@@ -7,7 +7,7 @@
 #' @param x [\code{vector}]\cr
 #'   Input vector.
 #' @return [\code{vector}] Shuffled/scrambled \code{x}.
-#' @expamples
+#' @examples
 #' shuffle(1:10)
 #' @export
 shuffle = function(x) {

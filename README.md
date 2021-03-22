@@ -6,7 +6,6 @@
 [![Build Status](https://travis-ci.org/jakobbossek/re.svg?branch=master)](https://travis-ci.org/jakobbossek/re)
 [![Build status](https://ci.appveyor.com/api/projects/status/eu0nns2dsgocwntw/branch/master?svg=true)](https://ci.appveyor.com/project/jakobbossek/re/branch/master)
 [![Coverage Status](https://coveralls.io/repos/github/jakobbossek/re/badge.svg?branch=master)](https://coveralls.io/github/jakobbossek/re?branch=master)
-[![Research software impact](http://depsy.org/api/package/cran/re/badge.svg)](http://depsy.org/package/r/re)
 
 ## What is this all about?
 
@@ -14,7 +13,7 @@ A set of small helper functions which are IMHO useful.
 
 ## Installation Instructions
 
-The package will be available at [CRAN](http://cran.r-project.org) when it is done. Install the developer version using [devtools](https://github.com/hadley/ddevtools) package and type the following command in R:
+The package will be available at [CRAN](http://cran.r-project.org) when it is done. Install the developer version using [devtools](https://github.com/hadley/devtools) package and type the following command in R:
 
 ```r
 devtools::install_github("jakobbossek/re")
