@@ -30,11 +30,11 @@
 #' @return [\code{data.frame | list}]
 #' @examples
 #' x = c("char_int10_num10.4", "char_int28_num30.444")
-#' strParse(x, types = "cin", names = c("character", "integer", "numeric"), split = "_")
-#' strParse(x, which = 2:3, types = "in", names = c("integer", "numeric"), split = "_")
-#' strParse(x, which = 2:3, types = "in", names = c("integer", "numeric"), as.df = FALSE, append = FALSE, split = "_")
+#' str_parse(x, types = "cin", names = c("character", "integer", "numeric"), split = "_")
+#' str_parse(x, which = 2:3, types = "in", names = c("integer", "numeric"), split = "_")
+#' str_parse(x, which = 2:3, types = "in", names = c("integer", "numeric"), as.df = FALSE, append = FALSE, split = "_")
 #' @export
-strParse = function(x, ext = NULL, which = NULL, types, names, as.df = TRUE, append = TRUE, ...) {
+str_parse = function(x, ext = NULL, which = NULL, types, names, as.df = TRUE, append = TRUE, ...) {
   checkmate::assertCharacter(x, min.len = 1L, any.missing = FALSE, all.missing = FALSE)
   checkmate::assertString(types)
 
@@ -84,12 +84,12 @@ strParse = function(x, ext = NULL, which = NULL, types, names, as.df = TRUE, app
     parts$input = xbck
 
   if (!as.df) {
-    return(rowsToList(parts, named = TRUE))
+    return(df_rows_to_list(parts, named = TRUE))
   }
   return(parts)
 }
 
 # Unexported function to make old scripts work
 parseString = function(...) {
-  strParse(...)
+  str_parse(...)
 }

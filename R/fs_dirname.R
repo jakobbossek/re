@@ -8,7 +8,7 @@
 #'   Depth of the k-fold
 #' @return [\code{character}]
 #' @export
-dirname2 = function(path, depth = 1L) {
+fs_dirname = function(path, depth = 1L) {
   checkmate::assert_character(path)
   depth = checkmate::asInt(depth, lower = 1L)
   while (depth > 0L) {

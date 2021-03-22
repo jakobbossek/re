@@ -16,20 +16,20 @@
 #'   last.
 #' @return [\code{data.frame}]
 #' @export
-dfAddCategory = function(x, col, values, new.value, factor.handling = "keep") {
+df_add_category = function(x, col, values, new.value, factor.handling = "keep") {
   checkmate::assertDataFrame(x, min.cols = 1L, min.rows = 1L)
   checkmate::assertChoice(factor.handling, choices = c("drop", "keep"))
   nc = ncol(x)
   cns = colnames(x)
   if (!is.numeric(x) & !(col %in% cns))
-    stopf("[dfAddCategory] Parameter col needs to be a valid column name of x or a column number.")
+    stopf("[df_add_category] Parameter col needs to be a valid column name of x or a column number.")
 
   col.was.factor = FALSE
   col.fac.levels = NA
   col.fac.ordered = NA
 
   if (is.factor(x[[col]])) {
-    catf("[dfAddCategory] Converting factor column to character.")
+    catf("[df_add_category] Converting factor column to character.")
     col.was.factor = TRUE
     col.levels = levels(x[[col]])
     col.ordered = is.ordered(x[[col]])

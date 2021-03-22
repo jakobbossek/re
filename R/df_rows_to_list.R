@@ -14,11 +14,11 @@
 #' @return [\code{list}] List of (named) lists.
 #' @examples
 #' x = data.frame(x = 1:3, y = letters[3:5])
-#' rowsToList(x)
-#' rowsToList(x, named = FALSE)
-#' rowsToList(unname(x), named = FALSE)
+#' df_rows_to_list(x)
+#' df_rows_to_list(x, named = FALSE)
+#' df_rows_to_list(unname(x), named = FALSE)
 #' @export
-rowsToList = function(x, named = TRUE) {
+df_rows_to_list = function(x, named = TRUE) {
   checkmate::assertDataFrame(x, min.rows = 1L)
   ns = colnames(x)
   is.named = !is.null(ns)

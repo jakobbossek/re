@@ -14,7 +14,7 @@ fs_drop_ext = function(path, pos = "first") {
     checkmate::assert_choice(pos, choices = c("first", "last"))
   else
     pos = checkmate::asInt(pos, lower = 1L)
-  dn = dirname2(path)
+  dn = fs_dirname(path)
   bn = basename(path)
   dot_pos = unlist(gregexpr(pattern = '\\.', bn))
   n_dots = length(dot_pos)

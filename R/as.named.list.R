@@ -10,11 +10,11 @@
 #' @return [\code{list}] Named list.
 #' @examples
 #' x = 1:3
-#' asNamedList(x, names = "x", sep = "-")
-#' asNamedList(x, names = "x")
-#' asNamedList(x, names = c("e1", "e2", "e3"))
+#' as.named.list(x, names = "x", sep = "-")
+#' as.named.list(x, names = "x")
+#' as.named.list(x, names = c("e1", "e2", "e3"))
 #' @export
-asNamedList = function(x, names, sep = ".") {
+as.named.list = function(x, names, sep = ".") {
   checkmate::assertVector(x, min.len = 1L)
   checkmate::assertCharacter(names, min.len = 1L, any.missing = FALSE, all.missing = FALSE)
   checkmate::assertString(sep, na.ok = FALSE, min.chars = 1L)
@@ -22,7 +22,7 @@ asNamedList = function(x, names, sep = ".") {
   nn = length(names)
 
   if ((nx != nn) & (nn > 1L))
-    stopf("[asNamedList] names must be a character vector of length 1 or the length of x.")
+    stopf("[as.named.list] names must be a character vector of length 1 or the length of x.")
 
   if (is.vector(x))
     x = as.list(x)
