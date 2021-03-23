@@ -14,5 +14,5 @@
 is.permutation = function(x, s) {
   checkmate::assert_vector(x)
   checkmate::assert_vector(s)
-  all(x %in% s) & (length(x) == length(s))
+  all(x %in% s) & all(s %in% x) & (length(x) == length(s))
 }
