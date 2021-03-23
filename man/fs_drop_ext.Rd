@@ -4,7 +4,7 @@
 \alias{fs_drop_ext}
 \title{Drop file extension(s).}
 \usage{
-fs_drop_ext(path, pos = "first")
+fs_drop_ext(path, pos = "first", ext = NULL)
 }
 \arguments{
 \item{path}{[\code{character}]\cr
@@ -15,6 +15,11 @@ This parameter specifies which dot in the filename should be considered to
 split the actual name from the file extension. Defaults to \dQuote{first},
 i.e., the first dot is used. Option \dQuote{last} anologously uses the last
 dot. Alternatively, one can pass a single integer specifying the position.}
+
+\item{ext}{[\code{character(1)}]\cr
+Optional explicit character vector of file extension(s) to drop without
+leading dot.
+Default is \code{NULL}.}
 }
 \value{
 [\code{character}]
