@@ -44,6 +44,7 @@ fs_drop_ext = function(path, pos = "first", ext = NULL) {
     return(dp)
   })
 
+  # workaround for files where no dot was found in the basename
   idx.na = which(is.na(dot_pos))
   if (length(idx.na) > 0L) {
     dot_pos[idx.na] = sapply(bn[idx.na], nchar) + 1L
