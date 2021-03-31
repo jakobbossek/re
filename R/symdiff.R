@@ -1,6 +1,6 @@
 #' @title Set operation symmetric difference.
 #'
-#' @description Performs symmetric(!) \textbf{set} difference in contrast
+#' @description Performs symmetric(!) \strong{set} difference in contrast
 #' to \code{\link[base]{setdiff}}. I.e. given two vectors (of the same mode) the result
 #' contains all elements that are either in the first or the second vector
 #' but not in both. Duplicated values in the arguments will be discarded.
