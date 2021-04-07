@@ -21,6 +21,7 @@ stopf = function(fmt, ...) {
 }
 
 #' @rdname catf
+#' @aliases warningf
 #' @export
 warnf = function(fmt, ...) {
   warning(sprintf(fmt, ...))
