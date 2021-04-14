@@ -32,7 +32,8 @@
 #' x = c("char_int10_num10.4", "char_int28_num30.444")
 #' str_parse(x, types = "cin", names = c("character", "integer", "numeric"), split = "_")
 #' str_parse(x, which = 2:3, types = "in", names = c("integer", "numeric"), split = "_")
-#' str_parse(x, which = 2:3, types = "in", names = c("integer", "numeric"), as.df = FALSE, append = FALSE, split = "_")
+#' str_parse(x, which = 2:3, types = "in", names = c("integer", "numeric"),
+#'   as.df = FALSE, append = FALSE, split = "_")
 #' @export
 str_parse = function(x, ext = NULL, which = NULL, types, names, as.df = TRUE, append = TRUE, ...) {
   checkmate::assertCharacter(x, min.len = 1L, any.missing = FALSE, all.missing = FALSE)
