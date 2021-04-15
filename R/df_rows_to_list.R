@@ -25,6 +25,7 @@ df_rows_to_list = function(x, named = TRUE) {
   nc = ncol(x)
   lapply(seq_len(nrow(x)), function(i) {
     l = unname(as.list(x[i, ]))
+    attributes(l) = NULL
     if (named) {
       if (is.named)
         names(l) = ns
