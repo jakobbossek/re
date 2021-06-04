@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Modified version of sample. — sample2 • re</title>
+<title>Bind lapply results — cbind_lapply • re</title>
 
 
 <!-- jquery -->
@@ -39,13 +39,8 @@
 
 
 
-<meta property="og:title" content="Modified version of sample. — sample2" />
-<meta property="og:description" content="Function sample, given the first parameter
-x is a single integer value, samples from the set \(1,\ldots,x\).
-This behavior might be undesirable when sample is embedded
-into routines and x is a variable.
-This function remedies this issue. If x is a number it returns x
-size-times." />
+<meta property="og:title" content="Bind lapply results — cbind_lapply" />
+<meta property="og:description" content="Simple shortcut for do.call(cbind, lapply(...))." />
 
 
 
@@ -113,48 +108,43 @@ size-times." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Modified version of <code><a href='https://rdrr.io/r/base/sample.html'>sample</a></code>.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jakobbossek/re/blob/master/R/sample2.R'><code>R/sample2.R</code></a></small>
-    <div class="hidden name"><code>sample2.Rd</code></div>
+    <h1>Bind lapply results</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jakobbossek/re/blob/master/R/cbind_lapply.R'><code>R/cbind_lapply.R</code></a></small>
+    <div class="hidden name"><code>cbind_lapply.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Function <code><a href='https://rdrr.io/r/base/sample.html'>sample</a></code>, given the first parameter
-<code>x</code> is a single integer value, samples from the set \(1,\ldots,x\).
-This behavior might be undesirable when <code><a href='https://rdrr.io/r/base/sample.html'>sample</a></code> is embedded
-into routines and <code>x</code> is a variable.
-This function remedies this issue. If <code>x</code> is a number it returns <code>x</code>
-<code>size</code>-times.</p>
+    <p>Simple shortcut for <code><a href='https://rdrr.io/r/base/do.call.html'>do.call(cbind, lapply(...))</a></code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>sample2</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>size</span>, replace <span class='op'>=</span> <span class='cn'>FALSE</span>, <span class='va'>...</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>cbind_lapply</span><span class='op'>(</span><span class='va'>X</span>, <span class='va'>FUN</span>, <span class='va'>...</span><span class='op'>)</span>
+
+<span class='fu'>rbind_lapply</span><span class='op'>(</span><span class='va'>X</span>, <span class='va'>FUN</span>, <span class='va'>...</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>x</th>
-      <td><p>either a vector of one or more elements from which to choose,
-    or a positive integer.  See &#8216;Details.&#8217;</p></td>
+      <th>X</th>
+      <td><p>[any]<br />
+Iterable objects, e.g. list or vector.</p></td>
     </tr>
     <tr>
-      <th>size</th>
-      <td><p>a non-negative integer giving the number of items to choose.</p></td>
-    </tr>
-    <tr>
-      <th>replace</th>
-      <td><p>should sampling be with replacement?</p></td>
+      <th>FUN</th>
+      <td><p>[<code>function</code>]<br />
+Function applied to each element of <code>X</code> (see <code><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></code>).</p></td>
     </tr>
     <tr>
       <th>...</th>
       <td><p>[any]<br />
-Further parameters passed down to <code><a href='https://rdrr.io/r/base/sample.html'>sample</a></code>, e.g. <code>prob</code>.</p></td>
+Furhter parameters passed down to <code><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></code>.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A vector.</p>
+    <p>See return value of <code><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></code> and <code><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></code>
+respectively.<br /></p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

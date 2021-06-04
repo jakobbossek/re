@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Modified version of sample. — sample2 • re</title>
+<title>Create a named list — named_list • re</title>
 
 
 <!-- jquery -->
@@ -39,13 +39,9 @@
 
 
 
-<meta property="og:title" content="Modified version of sample. — sample2" />
-<meta property="og:description" content="Function sample, given the first parameter
-x is a single integer value, samples from the set \(1,\ldots,x\).
-This behavior might be undesirable when sample is embedded
-into routines and x is a variable.
-This function remedies this issue. If x is a number it returns x
-size-times." />
+<meta property="og:title" content="Create a named list — named_list" />
+<meta property="og:description" content="Generator for named list (length corresponds to the number of
+names) where each item is optionally initialized with a pre-defined value." />
 
 
 
@@ -113,49 +109,210 @@ size-times." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Modified version of <code><a href='https://rdrr.io/r/base/sample.html'>sample</a></code>.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jakobbossek/re/blob/master/R/sample2.R'><code>R/sample2.R</code></a></small>
-    <div class="hidden name"><code>sample2.Rd</code></div>
+    <h1>Create a named list</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jakobbossek/re/blob/master/R/named_list.R'><code>R/named_list.R</code></a></small>
+    <div class="hidden name"><code>named_list.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Function <code><a href='https://rdrr.io/r/base/sample.html'>sample</a></code>, given the first parameter
-<code>x</code> is a single integer value, samples from the set \(1,\ldots,x\).
-This behavior might be undesirable when <code><a href='https://rdrr.io/r/base/sample.html'>sample</a></code> is embedded
-into routines and <code>x</code> is a variable.
-This function remedies this issue. If <code>x</code> is a number it returns <code>x</code>
-<code>size</code>-times.</p>
+    <p>Generator for named list (length corresponds to the number of
+names) where each item is optionally initialized with a pre-defined value.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>sample2</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>size</span>, replace <span class='op'>=</span> <span class='cn'>FALSE</span>, <span class='va'>...</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>named_list</span><span class='op'>(</span><span class='va'>ns</span>, init <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>x</th>
-      <td><p>either a vector of one or more elements from which to choose,
-    or a positive integer.  See &#8216;Details.&#8217;</p></td>
+      <th>ns</th>
+      <td><p>[<code>character</code>]<br />
+Vector of list item names.</p></td>
     </tr>
     <tr>
-      <th>size</th>
-      <td><p>a non-negative integer giving the number of items to choose.</p></td>
-    </tr>
-    <tr>
-      <th>replace</th>
-      <td><p>should sampling be with replacement?</p></td>
-    </tr>
-    <tr>
-      <th>...</th>
+      <th>init</th>
       <td><p>[any]<br />
-Further parameters passed down to <code><a href='https://rdrr.io/r/base/sample.html'>sample</a></code>, e.g. <code>prob</code>.</p></td>
+Initial value for each list item.
+Defaults to <code>NULL</code>.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A vector.</p>
+    <p>A named list.</p>
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>named_list</span><span class='op'>(</span><span class='va'>letters</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>]</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; $a
+#&gt; NULL
+#&gt; 
+#&gt; $b
+#&gt; NULL
+#&gt; 
+#&gt; $c
+#&gt; NULL
+#&gt; 
+#&gt; $d
+#&gt; NULL
+#&gt; 
+#&gt; $e
+#&gt; NULL
+#&gt; 
+#&gt; $f
+#&gt; NULL
+#&gt; 
+#&gt; $g
+#&gt; NULL
+#&gt; 
+#&gt; $h
+#&gt; NULL
+#&gt; 
+#&gt; $i
+#&gt; NULL
+#&gt; 
+#&gt; $j
+#&gt; NULL
+#&gt; </div><div class='input'><span class='fu'>named_list</span><span class='op'>(</span><span class='va'>letters</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>]</span>, init <span class='op'>=</span> <span class='cn'>NA</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; $a
+#&gt; [1] NA
+#&gt; 
+#&gt; $b
+#&gt; [1] NA
+#&gt; 
+#&gt; $c
+#&gt; [1] NA
+#&gt; 
+#&gt; $d
+#&gt; [1] NA
+#&gt; 
+#&gt; $e
+#&gt; [1] NA
+#&gt; 
+#&gt; $f
+#&gt; [1] NA
+#&gt; 
+#&gt; $g
+#&gt; [1] NA
+#&gt; 
+#&gt; $h
+#&gt; [1] NA
+#&gt; 
+#&gt; $i
+#&gt; [1] NA
+#&gt; 
+#&gt; $j
+#&gt; [1] NA
+#&gt; </div><div class='input'><span class='fu'>named_list</span><span class='op'>(</span><span class='va'>letters</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>]</span>, init <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; $a
+#&gt; list()
+#&gt; 
+#&gt; $b
+#&gt; list()
+#&gt; 
+#&gt; $c
+#&gt; list()
+#&gt; 
+#&gt; $d
+#&gt; list()
+#&gt; 
+#&gt; $e
+#&gt; list()
+#&gt; 
+#&gt; $f
+#&gt; list()
+#&gt; 
+#&gt; $g
+#&gt; list()
+#&gt; 
+#&gt; $h
+#&gt; list()
+#&gt; 
+#&gt; $i
+#&gt; list()
+#&gt; 
+#&gt; $j
+#&gt; list()
+#&gt; </div><div class='input'><span class='fu'>named_list</span><span class='op'>(</span><span class='va'>letters</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>]</span>, init <span class='op'>=</span> <span class='fu'>named_list</span><span class='op'>(</span><span class='va'>letters</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; $a
+#&gt; $a$a
+#&gt; NULL
+#&gt; 
+#&gt; $a$b
+#&gt; NULL
+#&gt; 
+#&gt; 
+#&gt; $b
+#&gt; $b$a
+#&gt; NULL
+#&gt; 
+#&gt; $b$b
+#&gt; NULL
+#&gt; 
+#&gt; 
+#&gt; $c
+#&gt; $c$a
+#&gt; NULL
+#&gt; 
+#&gt; $c$b
+#&gt; NULL
+#&gt; 
+#&gt; 
+#&gt; $d
+#&gt; $d$a
+#&gt; NULL
+#&gt; 
+#&gt; $d$b
+#&gt; NULL
+#&gt; 
+#&gt; 
+#&gt; $e
+#&gt; $e$a
+#&gt; NULL
+#&gt; 
+#&gt; $e$b
+#&gt; NULL
+#&gt; 
+#&gt; 
+#&gt; $f
+#&gt; $f$a
+#&gt; NULL
+#&gt; 
+#&gt; $f$b
+#&gt; NULL
+#&gt; 
+#&gt; 
+#&gt; $g
+#&gt; $g$a
+#&gt; NULL
+#&gt; 
+#&gt; $g$b
+#&gt; NULL
+#&gt; 
+#&gt; 
+#&gt; $h
+#&gt; $h$a
+#&gt; NULL
+#&gt; 
+#&gt; $h$b
+#&gt; NULL
+#&gt; 
+#&gt; 
+#&gt; $i
+#&gt; $i$a
+#&gt; NULL
+#&gt; 
+#&gt; $i$b
+#&gt; NULL
+#&gt; 
+#&gt; 
+#&gt; $j
+#&gt; $j$a
+#&gt; NULL
+#&gt; 
+#&gt; $j$b
+#&gt; NULL
+#&gt; 
+#&gt; </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

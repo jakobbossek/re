@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Modified version of sample. — sample2 • re</title>
+<title>Where is is min or max value in a nmeric vector? — which_min • re</title>
 
 
 <!-- jquery -->
@@ -39,13 +39,8 @@
 
 
 
-<meta property="og:title" content="Modified version of sample. — sample2" />
-<meta property="og:description" content="Function sample, given the first parameter
-x is a single integer value, samples from the set \(1,\ldots,x\).
-This behavior might be undesirable when sample is embedded
-into routines and x is a variable.
-This function remedies this issue. If x is a number it returns x
-size-times." />
+<meta property="og:title" content="Where is is min or max value in a nmeric vector? — which_min" />
+<meta property="og:description" content="Where is is min or max value in a nmeric vector?" />
 
 
 
@@ -113,49 +108,60 @@ size-times." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Modified version of <code><a href='https://rdrr.io/r/base/sample.html'>sample</a></code>.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jakobbossek/re/blob/master/R/sample2.R'><code>R/sample2.R</code></a></small>
-    <div class="hidden name"><code>sample2.Rd</code></div>
+    <h1>Where is is min or max value in a nmeric vector?</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jakobbossek/re/blob/master/R/which_min.R'><code>R/which_min.R</code></a></small>
+    <div class="hidden name"><code>which_min.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Function <code><a href='https://rdrr.io/r/base/sample.html'>sample</a></code>, given the first parameter
-<code>x</code> is a single integer value, samples from the set \(1,\ldots,x\).
-This behavior might be undesirable when <code><a href='https://rdrr.io/r/base/sample.html'>sample</a></code> is embedded
-into routines and <code>x</code> is a variable.
-This function remedies this issue. If <code>x</code> is a number it returns <code>x</code>
-<code>size</code>-times.</p>
+    <p>Where is is min or max value in a nmeric vector?</p>
     </div>
 
-    <pre class="usage"><span class='fu'>sample2</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>size</span>, replace <span class='op'>=</span> <span class='cn'>FALSE</span>, <span class='va'>...</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>which_min</span><span class='op'>(</span><span class='va'>x</span>, return.method <span class='op'>=</span> <span class='st'>"first"</span><span class='op'>)</span>
+
+<span class='fu'>which_max</span><span class='op'>(</span><span class='va'>x</span>, return.method <span class='op'>=</span> <span class='st'>"first"</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>either a vector of one or more elements from which to choose,
-    or a positive integer.  See &#8216;Details.&#8217;</p></td>
+      <td><p>[<code>numeric</code>]<br />
+Numeric vector.</p></td>
     </tr>
     <tr>
-      <th>size</th>
-      <td><p>a non-negative integer giving the number of items to choose.</p></td>
-    </tr>
-    <tr>
-      <th>replace</th>
-      <td><p>should sampling be with replacement?</p></td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td><p>[any]<br />
-Further parameters passed down to <code><a href='https://rdrr.io/r/base/sample.html'>sample</a></code>, e.g. <code>prob</code>.</p></td>
+      <th>return.method</th>
+      <td><p>[<code>string</code>]<br />
+What to return in the presence of ties?</p><ul>
+<li><p>&#8220;first&#8221;: first occurence</p></li>
+<li><p>&#8220;last&#8221;: last occurence</p></li>
+<li><p>&#8220;random&#8221;: sampled uniformly at random from all positions</p></li>
+<li><p>&#8220;all&#8221;: returns a vector of all positions</p></li>
+</ul><p>Default is &#8220;first&#8221;.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A vector.</p>
+    <p>Vector of integer position(s).</p>
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='va'>x</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>10</span>, <span class='fl'>24</span>, <span class='fl'>2</span>, <span class='fl'>2</span>, <span class='fl'>15</span>, <span class='fl'>2</span>, <span class='fl'>28</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"first"</span>, <span class='st'>"last"</span>, <span class='st'>"random"</span>, <span class='st'>"all"</span><span class='op'>)</span>, <span class='kw'>function</span><span class='op'>(</span><span class='va'>m</span><span class='op'>)</span> <span class='op'>{</span>
+ <span class='fu'>which_min</span><span class='op'>(</span><span class='va'>x</span>, return.method <span class='op'>=</span> <span class='va'>m</span><span class='op'>)</span>
+<span class='op'>}</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [[1]]
+#&gt; [1] 3
+#&gt; 
+#&gt; [[2]]
+#&gt; [1] 6
+#&gt; 
+#&gt; [[3]]
+#&gt; [1] 6
+#&gt; 
+#&gt; [[4]]
+#&gt; [1] 3 4 6
+#&gt; </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

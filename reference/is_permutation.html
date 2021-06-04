@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Modified version of sample. — sample2 • re</title>
+<title>Test for permutation — is_permutation • re</title>
 
 
 <!-- jquery -->
@@ -39,13 +39,8 @@
 
 
 
-<meta property="og:title" content="Modified version of sample. — sample2" />
-<meta property="og:description" content="Function sample, given the first parameter
-x is a single integer value, samples from the set \(1,\ldots,x\).
-This behavior might be undesirable when sample is embedded
-into routines and x is a variable.
-This function remedies this issue. If x is a number it returns x
-size-times." />
+<meta property="og:title" content="Test for permutation — is_permutation" />
+<meta property="og:description" content="Check whether x is a permutation of the multi-set s." />
 
 
 
@@ -113,49 +108,40 @@ size-times." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Modified version of <code><a href='https://rdrr.io/r/base/sample.html'>sample</a></code>.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jakobbossek/re/blob/master/R/sample2.R'><code>R/sample2.R</code></a></small>
-    <div class="hidden name"><code>sample2.Rd</code></div>
+    <h1>Test for permutation</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jakobbossek/re/blob/master/R/is_permutation.R'><code>R/is_permutation.R</code></a></small>
+    <div class="hidden name"><code>is_permutation.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Function <code><a href='https://rdrr.io/r/base/sample.html'>sample</a></code>, given the first parameter
-<code>x</code> is a single integer value, samples from the set \(1,\ldots,x\).
-This behavior might be undesirable when <code><a href='https://rdrr.io/r/base/sample.html'>sample</a></code> is embedded
-into routines and <code>x</code> is a variable.
-This function remedies this issue. If <code>x</code> is a number it returns <code>x</code>
-<code>size</code>-times.</p>
+    <p>Check whether <code>x</code> is a permutation of the multi-set <code>s</code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>sample2</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>size</span>, replace <span class='op'>=</span> <span class='cn'>FALSE</span>, <span class='va'>...</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>is_permutation</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>s</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>either a vector of one or more elements from which to choose,
-    or a positive integer.  See &#8216;Details.&#8217;</p></td>
+      <td><p>[<code>vector</code>]<br />
+Input vector to be checked.</p></td>
     </tr>
     <tr>
-      <th>size</th>
-      <td><p>a non-negative integer giving the number of items to choose.</p></td>
-    </tr>
-    <tr>
-      <th>replace</th>
-      <td><p>should sampling be with replacement?</p></td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td><p>[any]<br />
-Further parameters passed down to <code><a href='https://rdrr.io/r/base/sample.html'>sample</a></code>, e.g. <code>prob</code>.</p></td>
+      <th>s</th>
+      <td><p>[<code>vector</code>]<br />
+Base set.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A vector.</p>
+    <p>A scalar logical value.</p>
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>is_permutation</span><span class='op'>(</span><span class='fu'><a href='shuffle.html'>shuffle</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>)</span>, <span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] TRUE</div><div class='input'><span class='fu'>is_permutation</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span>, <span class='fl'>1</span>, <span class='fl'>4</span><span class='op'>)</span>, s <span class='op'>=</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>4</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] FALSE</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
