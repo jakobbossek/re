@@ -1,6 +1,8 @@
-#' @title Modified version of \code{\link[base]{sample}}.
+#' @title
+#' Modified version of \code{\link[base]{sample}}.
 #'
-#' @description Function \code{\link[base]{sample}}, given the first parameter
+#' @description
+#' Function \code{\link[base]{sample}}, given the first parameter
 #' \code{x} is a single integer value, samples from the set \eqn{1,\ldots,x}.
 #' This behavior might be undesirable when \code{\link[base]{sample}} is embedded
 #' into routines and \code{x} is a variable.
@@ -10,7 +12,7 @@
 #' @inheritParams base::sample
 #' @param ... [any]\cr
 #'   Further parameters passed down to \code{\link[base]{sample}}, e.g. \code{prob}.
-#' @return [\code{vector}]
+#' @return A vector.
 #' @export
 sample2 = function(x, size, replace = FALSE, ...) {
   n = length(x)

@@ -1,6 +1,8 @@
-#' @title Bind lapply results.
+#' @title
+#' Bind lapply results
 #'
-#' @description Simple shortcut for \code{do.call(cbind, lapply(...))}.
+#' @description
+#' Simple shortcut for \code{do.call(cbind, lapply(...))}.
 #'
 #' @param X [any]\cr
 #'   Iterable objects, e.g. list or vector.
@@ -11,12 +13,12 @@
 #' @return See return value of \code{\link[base]{cbind}} and \code{\link[base]{rbind}}
 #' respectively.\cr
 #' @export
-cbindlapply = function(X, FUN, ...) {
+cbind_lapply = function(X, FUN, ...) {
   do.call(cbind, lapply(X, FUN, ...))
 }
 
-#' @rdname cbindlapply
+#' @rdname cbind_lapply
 #' @export
-rbindlapply = function(X, FUN, ...) {
+rbind_lapply = function(X, FUN, ...) {
   do.call(rbind, lapply(X, FUN, ...))
 }

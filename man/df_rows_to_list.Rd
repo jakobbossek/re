@@ -2,7 +2,7 @@
 % Please edit documentation in R/df_rows_to_list.R
 \name{df_rows_to_list}
 \alias{df_rows_to_list}
-\title{Convert data frame rows to list.}
+\title{Convert data frame rows to list}
 \usage{
 df_rows_to_list(x, named = TRUE)
 }
@@ -18,7 +18,7 @@ Otherwise names \dQuote{V1, ...,VX} are used where X equals
 Default is \code{TRUE}.}
 }
 \value{
-[\code{list}] List of (named) lists.
+List of (named) lists.
 }
 \description{
 Returns a list of lists with each sub-list being a
@@ -30,3 +30,11 @@ df_rows_to_list(x)
 df_rows_to_list(x, named = FALSE)
 df_rows_to_list(unname(x), named = FALSE)
 }
+\seealso{
+Other data frame helpers: 
+\code{\link{df_add_category}()},
+\code{\link{df_add_constant_columns}()},
+\code{\link{df_explode}()},
+\code{\link{df_split_col}()}
+}
+\concept{data frame helpers}

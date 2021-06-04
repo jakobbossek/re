@@ -2,7 +2,7 @@
 % Please edit documentation in R/fs_path_pop.R
 \name{fs_path_pop}
 \alias{fs_path_pop}
-\title{Stack-like pop operation for path names.}
+\title{Stack-like pop operation for path names}
 \usage{
 fs_path_pop(path, depth = 1L)
 }
@@ -15,8 +15,14 @@ How many parts should be dropped?
 Default to 1. In this case the function behaves like \code{basename(path)}.}
 }
 \value{
-[\code{character}]
+A character vector.
 }
 \description{
-Stack-like pop operation for path names.
+Stack-like pop operation for path names
 }
+\seealso{
+Other file-system helpers: 
+\code{\link{fs_dirname}()},
+\code{\link{fs_drop_ext}()}
+}
+\concept{file-system helpers}

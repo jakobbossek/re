@@ -2,7 +2,7 @@
 % Please edit documentation in R/insert.R
 \name{insert}
 \alias{insert}
-\title{Replace elements in a named vector or list.}
+\title{Replace elements in a named vector or list}
 \usage{
 insert(x, y, which)
 }
@@ -18,7 +18,7 @@ Entry names that should be replaced in \code{x}.
 Defaults to \code{names(y)}.}
 }
 \value{
-[\code{vector} | \code{list}]e
+Either a vector or a list depending on the type of \code{x} and \code{y}.
 }
 \description{
 Given two named vectors/lists \code{x} and \code{y} and a list of names

@@ -18,7 +18,7 @@ sample2(x, size, replace = FALSE, ...)
 Further parameters passed down to \code{\link[base]{sample}}, e.g. \code{prob}.}
 }
 \value{
-[\code{vector}]
+A vector.
 }
 \description{
 Function \code{\link[base]{sample}}, given the first parameter

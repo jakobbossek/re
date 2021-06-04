@@ -2,7 +2,7 @@
 % Please edit documentation in R/symdiff.R
 \name{symdiff}
 \alias{symdiff}
-\title{Set operation symmetric difference.}
+\title{Set operation symmetric difference}
 \usage{
 symdiff(x, y)
 }
@@ -14,7 +14,7 @@ Vector containing a sequence of items.}
 Another vector containing a sequence of items.}
 }
 \value{
-[\code{vector}]
+A vector with elements of the symmetric difference of \code{y} and \code{y}.
 }
 \description{
 Performs symmetric(!) \strong{set} difference in contrast

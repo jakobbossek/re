@@ -1,12 +1,16 @@
-#' @title k-fold dirname.
+#' @title
+#' k-fold dirname
 #'
-#' @description Given paths and an integer depth, the function calculates
+#' @description
+#' Given paths and an integer depth, the function calculates
 #' dirname(...(...dirname(paths))), depth times.
+#'
 #' @param path [\code{character}]\cr
 #'   Paths.
 #' @param depth [\code{integer(1)}]\cr
 #'   Depth of the k-fold
-#' @return [\code{character}]
+#' @return A character vector.
+#' @template family_filesystem_helpers
 #' @export
 fs_dirname = function(path, depth = 1L) {
   checkmate::assert_character(path)

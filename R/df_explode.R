@@ -1,6 +1,8 @@
-#' @title Split variable (column) into multiple.
+#' @title
+#' Split variable (column) into multiple.
 #'
-#' @description Split/explode a data frame character column into multiple columns.
+#' @description
+#' Split/explode a data frame character column into multiple columns.
 #' This is done by splitting the string by one or multiple delimiters. The split
 #' results are wrapped in a \code{data.frame} and \dQuote{cbinded} to \code{x}.
 #' Optionally, one can pass column names and/or types for the parts. E.g.
@@ -27,7 +29,8 @@
 #'   Single logical value indicating whether column \code{split.col} should
 #'   be kept or dropped.
 #'   Default is \code{FALSE}.
-#' @return [\code{data.frame}]
+#' @return Modified data frame.
+#' @template family_dataframe_helpers
 #' @export
 #' @examples
 #' x = data.frame(a = c("x-y-1", "a-b-2", "c-d-3"), b = 1:3, c = runif(3))

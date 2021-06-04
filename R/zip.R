@@ -1,6 +1,8 @@
-#' @title Aggregate vectors/lists into lists of lists.
+#' @title
+#' Aggregate vectors/lists into lists of lists
 #'
-#' @description This function emulates Python's zip function. It expects a
+#' @description
+#' This function emulates Python's zip function. It expects a
 #' variable number of arguments. If a single vector/list x is passed the
 #' return value is a list of lists where each sub-list contains the components
 #' \dQuote{key} and \dQuote{value}. If x is named the key is the name, otherwise
@@ -9,7 +11,7 @@
 #'
 #' @param ... [Lists/vectors]\cr
 #'   A variable number of lists or vectors of the same size.
-#' @return [\code{list}]
+#' @return A list of lists.
 #' @examples
 #' x = list("a" = 1, "b" = 2, "c" = 3)
 #' for (el in zip(x)) {

@@ -1,4 +1,5 @@
-#' @title Drop file extension(s).
+#' @title
+#' Drop file extension(s)
 #'
 #' @param path [\code{character}]\cr
 #'   Paths.
@@ -11,7 +12,8 @@
 #'   Optional explicit character vector of file extension(s) to drop without
 #'   leading dot.
 #'   Default is \code{NULL}.
-#' @return [\code{character}]
+#' @return A character vector.
+#' @template family_filesystem_helpers
 #' @export
 fs_drop_ext = function(path, pos = "first", ext = NULL) {
   checkmate::assert_character(ext, min.len = 1L, min.chars = 1L, any.missing = FALSE, all.missing = FALSE, null.ok = TRUE)

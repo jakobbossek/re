@@ -2,7 +2,7 @@
 % Please edit documentation in R/zip.R
 \name{zip}
 \alias{zip}
-\title{Aggregate vectors/lists into lists of lists.}
+\title{Aggregate vectors/lists into lists of lists}
 \usage{
 zip(...)
 }
@@ -11,7 +11,7 @@ zip(...)
 A variable number of lists or vectors of the same size.}
 }
 \value{
-[\code{list}]
+A list of lists.
 }
 \description{
 This function emulates Python's zip function. It expects a

@@ -5,7 +5,7 @@
 \alias{stopf}
 \alias{warnf}
 \alias{warningf}
-\title{Formatted output.}
+\title{Formatted output}
 \usage{
 catf(fmt, ...)
 

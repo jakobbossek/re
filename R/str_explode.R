@@ -1,6 +1,8 @@
-#' @title Split strings into parts of certain types.
+#' @title
+#' Split strings into parts of certain types
 #'
-#' @description Extract information from strings. This is done by splitting the
+#' @description
+#' Extract information from strings. This is done by splitting the
 #' string by one or multiple delimiters. The split results are wrapped in a
 #' \code{data.frame}. Optionally, one can pass column names and/or types for the
 #' parts. E.g. \code{types="cir"} converts the first part into character, the
@@ -20,7 +22,8 @@
 #'   \dQuote{'f'} (factor), dQuote{'i'} (integer), \dQuote{'l'} (logical) or
 #'   \dQuote{n}, \dQuote{d} or \dQuote{r} for numeric/double/real.
 #'   Default is \code{NULL}. In this case all split parts are characters.
-#' @return [\code{data.frame}]
+#' @return A data frame.
+#' @template family_string_helpers
 #' @export
 str_explode = function(x, split, names = NULL, types = NULL) {
   checkmate::assert_character(x, min.len = 1L, any.missing = FALSE, all.missing = FALSE)

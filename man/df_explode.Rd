@@ -34,7 +34,7 @@ be kept or dropped.
 Default is \code{FALSE}.}
 }
 \value{
-[\code{data.frame}]
+Modified data frame.
 }
 \description{
 Split/explode a data frame character column into multiple columns.
@@ -51,3 +51,11 @@ df_explode(x, split.col = "a", split = "-", keep = TRUE)
 df_explode(x, split.col = "a", split = "-", names = c("A", "B", "C"))
 df_explode(x, split.col = "a", split = "-", types = "cci")
 }
+\seealso{
+Other data frame helpers: 
+\code{\link{df_add_category}()},
+\code{\link{df_add_constant_columns}()},
+\code{\link{df_rows_to_list}()},
+\code{\link{df_split_col}()}
+}
+\concept{data frame helpers}

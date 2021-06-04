@@ -3,7 +3,7 @@
 \name{str_explode}
 \alias{str_explode}
 \alias{explode}
-\title{Split strings into parts of certain types.}
+\title{Split strings into parts of certain types}
 \usage{
 str_explode(x, split, names = NULL, types = NULL)
 
@@ -29,7 +29,7 @@ the i-th split part. Possible characters are \dQuote{'c'} (character),
 Default is \code{NULL}. In this case all split parts are characters.}
 }
 \value{
-[\code{data.frame}]
+A data frame.
 }
 \description{
 Extract information from strings. This is done by splitting the
@@ -38,3 +38,9 @@ string by one or multiple delimiters. The split results are wrapped in a
 parts. E.g. \code{types="cir"} converts the first part into character, the
 second into integer and the third into real/double.
 }
+\seealso{
+Other string helpers: 
+\code{\link{str_parse}()},
+\code{\link{str_to_shortcut}()}
+}
+\concept{string helpers}

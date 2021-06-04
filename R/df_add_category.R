@@ -14,22 +14,23 @@
 #'   \dQuote{keep} does the same, but after adding the new category, the factor
 #'   property is reestablished. If the factor was ordered, the new category is placed
 #'   last.
-#' @return [\code{data.frame}]
+#' @return Modified data frame.
+#' @template family_dataframe_helpers
 #' @export
 df_add_category = function(x, col, values, new.value, factor.handling = "keep") {
-  checkmate::assertDataFrame(x, min.cols = 1L, min.rows = 1L)
-  checkmate::assertChoice(factor.handling, choices = c("drop", "keep"))
+  checkmate::assert_data_frame(x, min.cols = 1L, min.rows = 1L)
+  checkmate::assert_choice(factor.handling, choices = c("drop", "keep"))
   nc = ncol(x)
   cns = colnames(x)
   if (!is.numeric(x) & !(col %in% cns))
-    stopf("[df_add_category] Parameter col needs to be a valid column name of x or a column number.")
+    re::stopf("[df_add_category] Parameter col needs to be a valid column name of x or a column number.")
 
   col.was.factor = FALSE
   col.fac.levels = NA
   col.fac.ordered = NA
 
   if (is.factor(x[[col]])) {
-    catf("[df_add_category] Converting factor column to character.")
+    re::catf("[df_add_category] Converting factor column to character.")
     col.was.factor = TRUE
     col.levels = levels(x[[col]])
     col.ordered = is.ordered(x[[col]])

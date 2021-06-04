@@ -2,7 +2,7 @@
 % Please edit documentation in R/str_to_shortcut.R
 \name{str_to_shortcut}
 \alias{str_to_shortcut}
-\title{Make string shortcuts.}
+\title{Make string shortcuts}
 \usage{
 str_to_shortcut(x, split, nchars = 1, sep = "-", ...)
 }
@@ -26,7 +26,7 @@ Further arguments passed down to \code{\link[base]{strsplit}}.
 The most important here is \code{split}.}
 }
 \value{
-[\code{character}] Shortcut version of \code{x}.
+Shortcut version of \code{x}.
 }
 \description{
 Given a character vector, each element is split, the first
@@ -39,3 +39,9 @@ x = c("hello-world", "some-length-string")
 str_to_shortcut(x, split = "-")
 str_to_shortcut(x, nchars = 2L, sep = "", split = "-")
 }
+\seealso{
+Other string helpers: 
+\code{\link{str_explode}()},
+\code{\link{str_parse}()}
+}
+\concept{string helpers}

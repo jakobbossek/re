@@ -2,7 +2,7 @@
 % Please edit documentation in R/fs_drop_ext.R
 \name{fs_drop_ext}
 \alias{fs_drop_ext}
-\title{Drop file extension(s).}
+\title{Drop file extension(s)}
 \usage{
 fs_drop_ext(path, pos = "first", ext = NULL)
 }
@@ -22,8 +22,14 @@ leading dot.
 Default is \code{NULL}.}
 }
 \value{
-[\code{character}]
+A character vector.
 }
 \description{
-Drop file extension(s).
+Drop file extension(s)
 }
+\seealso{
+Other file-system helpers: 
+\code{\link{fs_dirname}()},
+\code{\link{fs_path_pop}()}
+}
+\concept{file-system helpers}

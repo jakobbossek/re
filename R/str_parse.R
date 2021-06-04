@@ -1,6 +1,8 @@
-#' @title Parse strings
+#' @title
+#' Parse strings
 #'
-#' @description Split character vector, i.e. each element, by a seperator and convert the resulting
+#' @description
+#' Split character vector, i.e. each element, by a seperator and convert the resulting
 #' exploded string into a typed list / data frame of meta information.
 #'
 #' @param x [\code{character}]\cr
@@ -27,17 +29,18 @@
 #' @param ... [any]\cr
 #'   Further arguments passed down to \code{\link[base]{strsplit}}.
 #'   Here, argument \code{split} is the most interesting one.
-#' @return [\code{data.frame | list}]
+#' @return A data frame or a list (depends on \code{as.df}).
+#' @template family_string_helpers
+#' @export
 #' @examples
 #' x = c("char_int10_num10.4", "char_int28_num30.444")
 #' str_parse(x, types = "cin", names = c("character", "integer", "numeric"), split = "_")
 #' str_parse(x, which = 2:3, types = "in", names = c("integer", "numeric"), split = "_")
 #' str_parse(x, which = 2:3, types = "in", names = c("integer", "numeric"),
 #'   as.df = FALSE, append = FALSE, split = "_")
-#' @export
 str_parse = function(x, ext = NULL, which = NULL, types, names, as.df = TRUE, append = TRUE, ...) {
-  checkmate::assertCharacter(x, min.len = 1L, any.missing = FALSE, all.missing = FALSE)
-  checkmate::assertString(types)
+  checkmate::assert_character(x, min.len = 1L, any.missing = FALSE, all.missing = FALSE)
+  checkmate::assert_string(types)
 
   xbck = x
   if (!is.null(ext))

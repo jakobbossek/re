@@ -1,16 +1,18 @@
-#' @title Replace elements in a named vector or list.
+#' @title
+#' Replace elements in a named vector or list
 #'
-#' @description Given two named vectors/lists \code{x} and \code{y} and a list of names
+#' @description
+#' Given two named vectors/lists \code{x} and \code{y} and a list of names
 #' this function replaces all entries of \code{x} with the matching entries in \code{y}.
 #'
-#' @param x [\code{vector}]\cr
+#' @param x [\code{vector}]\cr
 #'   First vector.
-#' @param y [\code{vector}]\cr
+#' @param y [\code{vector}]\cr
 #'   Second vector.
 #' @param which [\code{character}]\cr
 #'   Entry names that should be replaced in \code{x}.
 #'   Defaults to \code{names(y)}.
-#' @return [\code{vector} | \code{list}]e
+#' @return Either a vector or a list depending on the type of \code{x} and \code{y}.
 #' @examples
 #' x = list(a = 100, b = letters[1:3])
 #' y = list(b = "hello", c = "world")

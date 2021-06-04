@@ -2,7 +2,7 @@
 % Please edit documentation in R/shuffle.R
 \name{shuffle}
 \alias{shuffle}
-\title{Random shuffle of a vector.}
+\title{Random shuffle of a vector}
 \usage{
 shuffle(x)
 }
@@ -11,7 +11,7 @@ shuffle(x)
 Input vector.}
 }
 \value{
-[\code{vector}] Shuffled/scrambled \code{x}.
+Shuffled/scrambled \code{x}.
 }
 \description{
 Basically an alias for \code{\link[base]{sample}}

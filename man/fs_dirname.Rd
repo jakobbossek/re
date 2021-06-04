@@ -2,7 +2,7 @@
 % Please edit documentation in R/fs_dirname.R
 \name{fs_dirname}
 \alias{fs_dirname}
-\title{k-fold dirname.}
+\title{k-fold dirname}
 \usage{
 fs_dirname(path, depth = 1L)
 }
@@ -14,9 +14,15 @@ Paths.}
 Depth of the k-fold}
 }
 \value{
-[\code{character}]
+A character vector.
 }
 \description{
 Given paths and an integer depth, the function calculates
 dirname(...(...dirname(paths))), depth times.
 }
+\seealso{
+Other file-system helpers: 
+\code{\link{fs_drop_ext}()},
+\code{\link{fs_path_pop}()}
+}
+\concept{file-system helpers}

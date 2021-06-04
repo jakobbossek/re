@@ -1,6 +1,8 @@
-#' @title Split string/factor column.
+#' @title
+#' Split string/factor column
 #'
-#' @description Given a data frame \code{x}, a column name and a naming
+#' @description
+#' Given a data frame \code{x}, a column name and a naming
 #' scheme, the function splits every element in \code{x[[split.col]]},
 #' using the naming scheme. Next, either a data frame with column names
 #' indicating the split parts for each unique value in \code{x[[split.col]]}
@@ -20,9 +22,12 @@
 #' @param append [\code{logical(1)}]\cr
 #'   Should the splitted data be appended to \code{x} by \code{split.col}?
 #'   Default is \code{FALSE}.
-#' @return [\code{data.frame}]
+#' @return Modified data frame.
+#' @template family_dataframe_helpers
 #' @export
 df_split_col = function(x, split.col, scheme, delim, append = TRUE) {
+  if (!requireNamespace("dplyr", quietly = TRUE))
+    stopf("[df_split_col] This function needs package \"dplyr\" to be installed.")
   uniqx = as.character(unique(x[[split.col]]))
   decoded = do.call(rbind, lapply(uniqx, function(e) {
     as.data.frame(decode_string(e, scheme, delim), stringsAsFactors = FALSE)

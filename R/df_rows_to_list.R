@@ -1,6 +1,8 @@
-#' @title Convert data frame rows to list.
+#' @title
+#' Convert data frame rows to list
 #'
-#' @description Returns a list of lists with each sub-list being a
+#' @description
+#' Returns a list of lists with each sub-list being a
 #' row of the data frame.
 #'
 #' @param x [\code{data.frame}]\cr
@@ -11,15 +13,16 @@
 #'   Otherwise names \dQuote{V1, ...,VX} are used where X equals
 #'   \code{ncol(x)}.
 #'   Default is \code{TRUE}.
-#' @return [\code{list}] List of (named) lists.
+#' @return List of (named) lists.
+#' @template family_dataframe_helpers
+#' @export
 #' @examples
 #' x = data.frame(x = 1:3, y = letters[3:5])
 #' df_rows_to_list(x)
 #' df_rows_to_list(x, named = FALSE)
 #' df_rows_to_list(unname(x), named = FALSE)
-#' @export
 df_rows_to_list = function(x, named = TRUE) {
-  checkmate::assertDataFrame(x, min.rows = 1L)
+  checkmate::assert_data_frame(x, min.rows = 1L)
   ns = colnames(x)
   is.named = !is.null(ns)
   nc = ncol(x)

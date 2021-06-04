@@ -1,6 +1,8 @@
-#' @title Make string shortcuts.
+#' @title
+#' Make string shortcuts
 #'
-#' @description Given a character vector, each element is split, the first
+#' @description
+#' Given a character vector, each element is split, the first
 #' \code{nchars} characters are extracted from each part and all parts are
 #' concatenated with \code{sep}.
 #' This is useful to obtain shortcuts of lengthy strings.
@@ -18,15 +20,16 @@
 #' @param ... [\code{any}]\cr
 #'   Further arguments passed down to \code{\link[base]{strsplit}}.
 #'   The most important here is \code{split}.
-#' @return [\code{character}] Shortcut version of \code{x}.
+#' @return Shortcut version of \code{x}.
+#' @template family_string_helpers
+#' @export
 #' @examples
 #' x = c("hello-world", "some-length-string")
 #' str_to_shortcut(x, split = "-")
 #' str_to_shortcut(x, nchars = 2L, sep = "", split = "-")
-#' @export
 str_to_shortcut = function(x, split, nchars = 1, sep = "-", ...) {
-  checkmate::assertCharacter(x, any.missing = FALSE, all.missing = FALSE)
-  checkmate::assertString(split, min.chars = 1L)
+  checkmate::assert_character(x, any.missing = FALSE, all.missing = FALSE)
+  checkmate::assert_string(split, min.chars = 1L)
   nchars = checkmate::asInt(nchars, lower = 1L)
 
   # split in parts

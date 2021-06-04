@@ -1,6 +1,8 @@
-#' @title Export ggplot object to file.
+#' @title
+#' Export ggplot object to file
 #'
-#' @description Simple wrapper to \code{\link[ggplot2]{ggsave}} setting \code{limitsize=FALSE}
+#' @description
+#' Simple wrapper to \code{\link[ggplot2]{ggsave}} setting \code{limitsize=FALSE}
 #' and \code{device=cairo_pdf} by default.
 #'
 #' @param filename [\code{character(1)}]\cr

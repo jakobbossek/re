@@ -2,7 +2,7 @@
 % Please edit documentation in R/ggsave2.R
 \name{ggsave2}
 \alias{ggsave2}
-\title{Export ggplot object to file.}
+\title{Export ggplot object to file}
 \usage{
 ggsave2(filename, plot = ggplot2::last_plot(), ...)
 }

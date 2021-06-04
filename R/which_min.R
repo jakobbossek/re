@@ -1,4 +1,5 @@
-#' @title Where is is min or max value in a nmeric vector?
+#' @title
+#' Where is is min or max value in a nmeric vector?
 #'
 #' @param x [\code{numeric}]\cr
 #'   Numeric vector.
@@ -11,25 +12,26 @@
 #'   \item{\dQuote{all}: returns a vector of all positions}
 #'   }
 #'   Default is \dQuote{first}.
-#' @return [\code{numeric}] Vector of integer position(s).
+#' @return Vector of integer position(s).
+#' @rdname which_min
+#' @name which_min
+#' @export
+#' @examples
 #' x = c(10, 24, 2, 2, 15, 2, 28)
 #' lapply(c("first", "last", "random", "all"), function(m) {
-#'  which.min(x, return.method = m)
+#'  which_min(x, return.method = m)
 #' })
-#' @rdname which.min
-#' @name which.min
-#' @export
-which.min = function(x, return.method = "first") {
-  which.order(x, return.method, base::min)
+which_min = function(x, return.method = "first") {
+  which_order(x, return.method, base::min)
 }
 
-#' @rdname which.min
+#' @rdname which_min
 #' @export
-which.max = function(x, return.method = "first") {
-  which.order(x, return.method, base::max)
+which_max = function(x, return.method = "first") {
+  which_order(x, return.method, base::max)
 }
 
-which.order = function(x, return.method = "first", fun) {
+which_order = function(x, return.method = "first", fun) {
   checkmate::assert_numeric(x, min.len = 1L)
   checkmate::assert_choice(return.method, choices = c("first", "last", "random", "all"))
   idx = which(x == fun(x))

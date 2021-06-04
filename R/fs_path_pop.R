@@ -1,11 +1,13 @@
-#' @title Stack-like pop operation for path names.
+#' @title
+#' Stack-like pop operation for path names
 #'
 #' @param path [\code{character}]\cr
 #'   Paths.
 #' @param depth [\code{integer(1)}]\cr
 #'   How many parts should be dropped?
 #'   Default to 1. In this case the function behaves like \code{basename(path)}.
-#' @return [\code{character}]
+#' @return A character vector.
+#' @template family_filesystem_helpers
 #' @export
 fs_path_pop = function(path, depth = 1L) {
   depth = checkmate::asInt(depth, lower = 1L)

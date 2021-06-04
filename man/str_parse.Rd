@@ -49,7 +49,7 @@ Further arguments passed down to \code{\link[base]{strsplit}}.
 Here, argument \code{split} is the most interesting one.}
 }
 \value{
-[\code{data.frame | list}]
+A data frame or a list (depends on \code{as.df}).
 }
 \description{
 Split character vector, i.e. each element, by a seperator and convert the resulting
@@ -62,3 +62,9 @@ str_parse(x, which = 2:3, types = "in", names = c("integer", "numeric"), split =
 str_parse(x, which = 2:3, types = "in", names = c("integer", "numeric"),
   as.df = FALSE, append = FALSE, split = "_")
 }
+\seealso{
+Other string helpers: 
+\code{\link{str_explode}()},
+\code{\link{str_to_shortcut}()}
+}
+\concept{string helpers}

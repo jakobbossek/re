@@ -14,7 +14,7 @@ Data frame with at least one row and column.}
 Named list of single elements.}
 }
 \value{
-[\code{data.frame}]
+Modified data frame.
 }
 \description{
 Add columns with constant values
@@ -23,3 +23,11 @@ Add columns with constant values
 x = data.frame(a = 1:2, b = 3:4)
 y = df_add_constant_columns(x, list(c = "a", d = 0.1))
 }
+\seealso{
+Other data frame helpers: 
+\code{\link{df_add_category}()},
+\code{\link{df_explode}()},
+\code{\link{df_rows_to_list}()},
+\code{\link{df_split_col}()}
+}
+\concept{data frame helpers}

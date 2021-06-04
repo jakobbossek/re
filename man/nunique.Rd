@@ -2,7 +2,7 @@
 % Please edit documentation in R/nunique.R
 \name{nunique}
 \alias{nunique}
-\title{Get number of unique elements.}
+\title{Get number of unique elements}
 \usage{
 nunique(x)
 }
@@ -11,7 +11,7 @@ nunique(x)
 A vector.}
 }
 \value{
-[\code{integer(1)}]
+A single integer value.
 }
 \description{
 Given a vector of atomic type (\code{logical}, \code{integer},

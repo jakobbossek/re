@@ -4,14 +4,15 @@
 #'   Data frame with at least one row and column.
 #' @param ccols [\code{list}]\cr
 #'   Named list of single elements.
-#' @return [\code{data.frame}]
+#' @return Modified data frame.
+#' @template family_dataframe_helpers
+#' @export
 #' @examples
 #' x = data.frame(a = 1:2, b = 3:4)
 #' y = df_add_constant_columns(x, list(c = "a", d = 0.1))
-#' @export
 df_add_constant_columns = function(x, ccols) {
-  checkmate::assertDataFrame(x, min.cols = 1, min.rows = 1L)
-  checkmate::assertList(ccols, min.len = 1L, names = "unique")
+  checkmate::assert_data_frame(x, min.cols = 1, min.rows = 1L)
+  checkmate::assert_list(ccols, min.len = 1L, names = "unique")
   cns = colnames(x)
   ncns = names(ccols)
   int = intersect(cns, ncns)

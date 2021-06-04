@@ -2,7 +2,7 @@
 % Please edit documentation in R/df_split_col.R
 \name{df_split_col}
 \alias{df_split_col}
-\title{Split string/factor column.}
+\title{Split string/factor column}
 \usage{
 df_split_col(x, split.col, scheme, delim, append = TRUE)
 }
@@ -26,7 +26,7 @@ Should the splitted data be appended to \code{x} by \code{split.col}?
 Default is \code{FALSE}.}
 }
 \value{
-[\code{data.frame}]
+Modified data frame.
 }
 \description{
 Given a data frame \code{x}, a column name and a naming
@@ -36,3 +36,11 @@ indicating the split parts for each unique value in \code{x[[split.col]]}
 is returned, or, if \code{append=TRUE}, this data frame is left-joined
 with \code{x} by \code{split.col}.
 }
+\seealso{
+Other data frame helpers: 
+\code{\link{df_add_category}()},
+\code{\link{df_add_constant_columns}()},
+\code{\link{df_explode}()},
+\code{\link{df_rows_to_list}()}
+}
+\concept{data frame helpers}

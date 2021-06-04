@@ -27,8 +27,16 @@ property is reestablished. If the factor was ordered, the new category is placed
 last.}
 }
 \value{
-[\code{data.frame}]
+Modified data frame.
 }
 \description{
 Add category for column.
 }
+\seealso{
+Other data frame helpers: 
+\code{\link{df_add_constant_columns}()},
+\code{\link{df_explode}()},
+\code{\link{df_rows_to_list}()},
+\code{\link{df_split_col}()}
+}
+\concept{data frame helpers}

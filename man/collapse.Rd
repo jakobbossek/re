@@ -14,7 +14,7 @@ Input vector.}
 Character used to seperate the entries of \code{x} in the produced string.}
 }
 \value{
-[\code{character(1)}]
+A character vector.
 }
 \description{
 Collapse string

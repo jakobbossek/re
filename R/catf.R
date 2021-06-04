@@ -1,6 +1,8 @@
-#' @title Formatted output.
+#' @title
+#' Formatted output
 #'
-#' @description Simple wrappers around \code{cat}, \code{stop}, \code{warning}
+#' @description
+#' Simple wrappers around \code{cat}, \code{stop}, \code{warning}
 #' and \code{sprintf}.
 #'
 #' @param fmt [\code{character(1)}]\cr

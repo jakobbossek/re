@@ -11,11 +11,11 @@ Authors@R: c(
 Depends:
   R (>= 3.1.0)
 Imports:
-  checkmate,
-  dplyr
+  checkmate
 Suggests:
   testthat,
-  ggplot2
+  ggplot2,
+  dplyr
 License: BSD_2_clause + file LICENSE
 URL: https://jakobbossek.github.io/re/, https://github.com/jakobbossek/re
 BugReports: https://github.com/jakobbossek/re/issues
