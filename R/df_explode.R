@@ -45,7 +45,9 @@ df_explode = function(x, split.col, split, names = NULL, types = NULL, keep = FA
     re::stopf("[df_explode] Argument split.col needs to be a column name of
       data frame x.")
 
-  if (any(names %in% colnames(x)))
+  cns = if (keep) colnames(x) else setdiff(colnames(x), split.col)
+
+  if (any(names %in% cns))
     re::stopf("[df_explode] Some names given in argument \"names\" are already
       used in as column names in x.")
 
