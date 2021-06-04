@@ -12,7 +12,7 @@
 #'   See parameter \code{split} of \code{\link[base]{strsplit}}.
 #' @param names [\code{character}]\cr
 #'   Optional column names.
-#'   If \code{NULL}, the column names are V1 to VN where N is the number of
+#'   If \code{NULL}, the column names are explode1 to explodeN where N is the number of
 #'   split parts.
 #' @param types [\code{character(1)}]\cr
 #'   Character string where the i-th character specifies the atomic data type of
@@ -22,7 +22,7 @@
 #'   Default is \code{NULL}. In this case all split parts are characters.
 #' @return [\code{data.frame}]
 #' @export
-explode = function(x, split, names = NULL, types = NULL) {
+str_explode = function(x, split, names = NULL, types = NULL) {
   checkmate::assert_character(x, min.len = 1L, any.missing = FALSE, all.missing = FALSE)
 
   exploded = strsplit(x, split = split)
@@ -30,6 +30,9 @@ explode = function(x, split, names = NULL, types = NULL) {
   n = length(exploded[[1L]])
 
   checkmate::assert_character(names, len = n, unique = TRUE, null.ok = TRUE)
+  if (is.null(names))
+    names = paste0("explode", seq_len(n))
+
   res = as.data.frame(do.call(rbind, exploded), stringsAsFactors = FALSE)
   colnames(res) = names
 
@@ -42,6 +45,12 @@ explode = function(x, split, names = NULL, types = NULL) {
     }
   }
   return(res)
+}
+
+#' @rdname str_explode
+#' @export
+explode = function(x, split, names = NULL, types = NULL) {
+  str_explode(x, split, names = NULL, types = NULL)
 }
 
 type_shortcut_to_fun = function(x) {

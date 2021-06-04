@@ -24,7 +24,7 @@ corresponding value.
 \examples{
 x = list("a" = 1, "b" = 2, "c" = 3)
 for (el in zip(x)) {
-  catf("Key: '\%s', Value: \%i\\n", el$key, el$value)
+  catf("Key: '\%s', Value: \%i\n", el$key, el$value)
 }
 
 z = zip(x, x)

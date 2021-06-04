@@ -4,8 +4,16 @@
 \alias{str_parse}
 \title{Parse strings}
 \usage{
-str_parse(x, ext = NULL, which = NULL, types, names, as.df = TRUE,
-  append = TRUE, ...)
+str_parse(
+  x,
+  ext = NULL,
+  which = NULL,
+  types,
+  names,
+  as.df = TRUE,
+  append = TRUE,
+  ...
+)
 }
 \arguments{
 \item{x}{[\code{character}]\cr
