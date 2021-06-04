@@ -4,3 +4,7 @@
 appveyor.yml
 test\.R
 README.md
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.github$
