@@ -1,5 +1,5 @@
 
-# re: Essential utilities missing in base R
+# re: Essential Utilities Missing in Base R
 
 **Visit the [package website](https://jakobbossek.github.io/re/).**
 
@@ -11,8 +11,7 @@ Badge](http://www.r-pkg.org/badges/version/re)](http://cran.r-project.org/web/pa
 Downloads](http://cranlogs.r-pkg.org/badges/re)](http://cran.rstudio.com/web/packages/re/index.html)
 [![CRAN
 Downloads](http://cranlogs.r-pkg.org/badges/grand-total/re?color=orange)](http://cran.rstudio.com/web/packages/re/index.html)
-[![Coverage
-Status](https://coveralls.io/repos/github/jakobbossek/re/badge.svg?branch=master)](https://coveralls.io/github/jakobbossek/re?branch=master)
+[![codecov](https://codecov.io/gh/jakobbossek/re/branch/master/graph/badge.svg?token=6K5A8F549N)](https://codecov.io/gh/jakobbossek/re)
 [![R-CMD-check](https://github.com/jakobbossek/re/workflows/R-CMD-check/badge.svg)](https://github.com/jakobbossek/re/actions)
 <!-- badges: end -->
 
