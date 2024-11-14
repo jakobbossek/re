@@ -41,7 +41,6 @@ str_to_shortcut(x, nchars = 2L, sep = "", split = "-")
 }
 \seealso{
 Other string helpers: 
-\code{\link{str_explode}()},
 \code{\link{str_parse}()}
 }
 \concept{string helpers}

@@ -21,8 +21,8 @@
 #'   split parts.
 #' @param types [\code{character(1)}]\cr
 #'   Character string where the i-th character specifies the atomic data type of
-#'   the i-th split part. Possible characters are \dQuote{'c'} (character),
-#'   \dQuote{'f'} (factor), dQuote{'i'} (integer), \dQuote{'l'} (logical) or
+#'   the i-th split part. Possible characters are \dQuote{c} (character),
+#'   \dQuote{f} (factor), \dQuote{i} (integer), \dQuote{l} (logical) or
 #'   \dQuote{n}, \dQuote{d} or \dQuote{r} for numeric/double/real.
 #'   Default is \code{NULL}. In this case all split parts are characters.
 #' @param keep [\code{logical(1)}]\cr

@@ -18,12 +18,12 @@
 #'   split parts.
 #' @param types [\code{character(1)}]\cr
 #'   Character string where the i-th character specifies the atomic data type of
-#'   the i-th split part. Possible characters are \dQuote{'c'} (character),
-#'   \dQuote{'f'} (factor), dQuote{'i'} (integer), \dQuote{'l'} (logical) or
+#'   the i-th split part. Possible characters are \dQuote{c} (character),
+#'   \dQuote{f} (factor), \dQuote{i} (integer), \dQuote{l} (logical) or
 #'   \dQuote{n}, \dQuote{d} or \dQuote{r} for numeric/double/real.
 #'   Default is \code{NULL}. In this case all split parts are characters.
 #' @return A data frame.
-#' @template family_string_helpers
+# @template family_string_helpers
 #' @export
 str_explode = function(x, split, names = NULL, types = NULL) {
   checkmate::assert_character(x, min.len = 1L, any.missing = FALSE, all.missing = FALSE)

@@ -23,8 +23,8 @@ split parts.}
 
 \item{types}{[\code{character(1)}]\cr
 Character string where the i-th character specifies the atomic data type of
-the i-th split part. Possible characters are \dQuote{'c'} (character),
-\dQuote{'f'} (factor), dQuote{'i'} (integer), \dQuote{'l'} (logical) or
+the i-th split part. Possible characters are \dQuote{c} (character),
+\dQuote{f} (factor), \dQuote{i} (integer), \dQuote{l} (logical) or
 \dQuote{n}, \dQuote{d} or \dQuote{r} for numeric/double/real.
 Default is \code{NULL}. In this case all split parts are characters.}
 }
@@ -38,9 +38,3 @@ string by one or multiple delimiters. The split results are wrapped in a
 parts. E.g. \code{types="cir"} converts the first part into character, the
 second into integer and the third into real/double.
 }
-\seealso{
-Other string helpers: 
-\code{\link{str_parse}()},
-\code{\link{str_to_shortcut}()}
-}
-\concept{string helpers}

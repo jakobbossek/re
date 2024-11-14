@@ -9,3 +9,6 @@ README.md
 ^pkgdown$
 ^\.github$
 ^codecov\.yml$
+README.Rmd
+README.html
+man-roxygen

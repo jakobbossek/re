@@ -15,7 +15,7 @@
 #'   Column name of column used for splitting.
 #' @param scheme [\code{string}]\cr
 #'   Single string encoding the names and types of the split parts.
-#'   E.g. \dQuote{group{c}/problem{c}_n{i}_m{i}/algorithm{c}_pc{r}}.
+#'   E.g. \dQuote{group\{c\}/problem\{c\}_n\{i\}_m\{i\}/algorithm\{c\}_pc\{r\}}.
 #'   Passed down to \code{decode_scheme}.
 #' @param delim [\code{character}]\cr
 #'   Set of characters used to split the entries in the column.

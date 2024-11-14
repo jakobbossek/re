@@ -64,7 +64,6 @@ str_parse(x, which = 2:3, types = "in", names = c("integer", "numeric"),
 }
 \seealso{
 Other string helpers: 
-\code{\link{str_explode}()},
 \code{\link{str_to_shortcut}()}
 }
 \concept{string helpers}
